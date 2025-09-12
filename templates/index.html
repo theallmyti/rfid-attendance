@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFID Attendance</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>RFID Attendance System</h1>
+    <form id="rfidForm" method="POST">
+        <input type="text" id="uid" name="uid" placeholder="Scan UID here" autofocus required>
+    </form>
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+    <a href="{{ url_for('manage') }}">Manage Students</a>
+</div>
+
+<script>
+const input = document.getElementById("uid");
+const form = document.getElementById("rfidForm");
+
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        form.submit();
+        input.value = "";
+    }
+});
+</script>
+</body>
+</html>

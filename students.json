@@ -1,0 +1,47 @@
+[
+    {
+        "UID": "0067668577",
+        "EnrollmentNo": "ENR001",
+        "Name": "Alice Johnson"
+    },
+    {
+        "UID": "0067554702",
+        "EnrollmentNo": "ENR002",
+        "Name": "Bob Smith"
+    },
+    {
+        "UID": "0067602524",
+        "EnrollmentNo": "ENR003",
+        "Name": "Charlie Davis"
+    },
+    {
+        "UID": "0067677319",
+        "EnrollmentNo": "ENR004",
+        "Name": "Diana Lee"
+    },
+    {
+        "UID": "0067528471",
+        "EnrollmentNo": "ENR005",
+        "Name": "Ethan Brown"
+    },
+    {
+        "UID": "0067405900",
+        "EnrollmentNo": "ENR006",
+        "Name": "Fiona Green"
+    },
+    {
+        "UID": "0067528011",
+        "EnrollmentNo": "ENR007",
+        "Name": "George White"
+    },
+    {
+        "UID": "0067452770",
+        "EnrollmentNo": "ENR008",
+        "Name": "Hannah Black"
+    },
+    {
+        "UID": "0067715947",
+        "EnrollmentNo": "ENR009",
+        "Name": "Aditya Prasad"
+    }
+]

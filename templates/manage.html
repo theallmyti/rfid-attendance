@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Students</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Manage Students</h1>
+
+    <h2>Add Student</h2>
+    <form method="POST">
+        <input type="hidden" name="action" value="Add">
+        <input type="text" name="uid" placeholder="UID" required>
+        <input type="text" name="enrollment" placeholder="Enrollment No" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Existing Students</h2>
+    <table>
+        <tr>
+            <th>UID</th>
+            <th>Enrollment</th>
+            <th>Name</th>
+            <th>Delete</th>
+        </tr>
+        {% for s in students %}
+        <tr>
+            <td>{{ s.UID }}</td>
+            <td>{{ s.EnrollmentNo }}</td>
+            <td>{{ s.Name }}</td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="action" value="Delete">
+                    <input type="hidden" name="uid" value="{{ s.UID }}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('home') }}">Back to Attendance</a>
+</div>
+</body>
+</html>
